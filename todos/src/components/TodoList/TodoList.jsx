@@ -1,9 +1,18 @@
-const TodoList = ({ todos }) => {
+import './TodoList.css';
+
+const TodoList = ({ todos, remove }) => {
   return (
-    <ul>
-      <h2>Todos List:</h2>
+    <ul className="todo-list">
+      <h2 className="todo-list__title">Todos List:</h2>
       {todos.map(({ todo, id }) => {
-        return <li key={id}>{todo}</li>;
+        return (
+          <li className="todo-list__item" key={id}>
+            <button className="todo-list__remove-button" onClick={() => remove(id)}>
+              X
+            </button>
+            {todo}
+          </li>
+        );
       })}
     </ul>
   );
