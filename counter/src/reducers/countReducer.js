@@ -14,7 +14,7 @@ export const countReducer = (state, action) => {
     case INCREMENT_BY_AMOUNT:
       return { ...state, count: state.count + action.payload };
     case DECREMENT_BY_AMOUNT:
-      return { ...state, count: state.count - action.pauload };
+      return { ...state, count: state.count - action.payload };
     default:
       return state;
   }
