@@ -1,0 +1,55 @@
+.accordion__card {
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  margin: 10px 0;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.accordion__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 20px;
+  background-color: #f7f7f7;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.accordion__header:hover {
+  background-color: #eee;
+}
+
+.accordion__header div {
+  font-size: 1.2rem;
+  font-weight: 500;
+}
+
+.accordion__icon {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #333;
+  transition: transform 0.3s ease;
+}
+
+.accordion__icon.active {
+  transform: rotate(180deg);
+}
+
+.accordion__content {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 1s ease, padding 0.3s ease;
+}
+
+.accordion__content.active {
+  max-height: 200px;
+  padding: 15px 20px;
+  background-color: #fafafa;
+}
+
+.accordion__info {
+  font-size: 1rem;
+  color: #666;
+  line-height: 1.6;
+}
